@@ -21,8 +21,7 @@ def env_handler(paramString):
             
         omap.append(
             {
-                'name': set.split('=')[0],
-                'value': value
+                set.split('=')[0]: value
             }
         )
 
