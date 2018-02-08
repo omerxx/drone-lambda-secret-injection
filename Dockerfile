@@ -4,7 +4,7 @@ RUN apk -Uuv add ca-certificates
 
 RUN pip install boto3
 
-ADD ecs-deploy.py /bin/
+ADD lambda-update-env.py /bin/
 
 RUN chmod +x /bin/ecs-deploy.py 
 
