@@ -37,6 +37,8 @@ def update_function_configuration():
         }
     )
 
+    print response
+
 
 ACCESS_KEY = pp('access_key')
 SECRET_KEY = pp('secret_key')
