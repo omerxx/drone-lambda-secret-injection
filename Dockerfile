@@ -6,6 +6,6 @@ RUN pip install boto3
 
 ADD lambda-update-env.py /bin/
 
-RUN chmod +x /bin/ecs-deploy.py 
+RUN chmod +x /bin/lambda-update-env.py 
 
 ENTRYPOINT ["python", "/bin/lambda-update-env.py"]
