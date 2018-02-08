@@ -9,7 +9,7 @@ def pp(name):
     if param:
         return param
     else:
-        print 'No such variable {}'.format(name)
+        print 'No such variable {}'.format(name) if 'key' not in name else ''
         return None
 
 
