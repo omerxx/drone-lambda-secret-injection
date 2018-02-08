@@ -1,0 +1,11 @@
+pipeline:  
+  docker-publish:
+    image: plugins/docker
+    repo: omerxx/drone-lambda-secret-injection
+    tag:
+      - ${DRONE_BUILD_NUMBER}
+      - latest
+    secrets: [ docker_username, docker_password ]
+    when:
+      branch: [master, develop]
+
