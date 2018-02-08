@@ -53,5 +53,7 @@ if __name__ == "__main__":
         aws_secret_access_key=SECRET_KEY,
         region_name=AWS_REGION
     )
+
+    update_function_configuration()
     
  
