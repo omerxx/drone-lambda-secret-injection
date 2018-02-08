@@ -33,7 +33,7 @@ def update_function_configuration():
     response = client.update_function_configuration(
         FunctionName = pp('functionname'),
         Environment={
-            'Variables': env_handler(pp(environment_variables))
+            'Variables': env_handler(pp('environment_variables'))
         }
     )
 
