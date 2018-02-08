@@ -14,16 +14,11 @@ def pp(name):
 
 
 def env_handler(paramString):
-    omap = []
+    omap = {}
     envSets = paramString.split(',')
     for set in envSets:
         value = os.environ.get(set.split('=')[0]) if not set.split('=')[1] and os.environ.get(set.split('=')[0]) else set.split('=')[1]
-            
-        omap.append(
-            {
-                set.split('=')[0]: value
-            }
-        )
+        omap[set.split('=')[0]] = value
 
     return omap  
 
