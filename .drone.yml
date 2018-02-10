@@ -1,7 +1,7 @@
 pipeline:  
 
   stage:
-    image: omerxx/drone-secret-deployer:3
+    image: alpine
     commands:
       - echo "GI"
     when:
