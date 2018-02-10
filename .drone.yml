@@ -1,10 +1,11 @@
 pipeline:  
-  add-repo:
+
+  stage:
     image: omerxx/drone-secret-deployer:2
     commands:
-      - echo HI
+      - echo "GI"
     when:
-      branch: develop
+      branch: [develop]
 
   docker-publish:
     image: plugins/docker
