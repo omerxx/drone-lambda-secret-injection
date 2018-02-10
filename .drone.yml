@@ -4,7 +4,6 @@ pipeline:
     when:
       branch: develop
 
-
   docker-publish:
     image: plugins/docker
     repo: omerxx/drone-lambda-secret-injection
