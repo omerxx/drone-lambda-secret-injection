@@ -1,7 +1,7 @@
 pipeline:  
 
   stage:
-    image: omerxx/drone-secret-deployer:4
+    image: omerxx/drone-secret-deployer:5
     commands:
       - echo "GI"
     when:
