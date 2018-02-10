@@ -1,10 +1,14 @@
 pipeline:  
   add-repo:
-    image: omerxx/drone-secret-deployer:test
-    pull: true
+    image: omerxx/drone-secret-deployer
+    drone_server: https://droneio.spot.im
+    action: add
+    secrets: 
+      - source: drone_token
+        target: plugin_drone_token
     when:
-      branch: [develops]
-  
+      branch: develop
+
 
   docker-publish:
     image: plugins/docker
