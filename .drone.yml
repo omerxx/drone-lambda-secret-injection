@@ -1,15 +1,10 @@
 pipeline:  
   add-repo:
     image: omerxx/drone-secret-deployer:test
+    pull: true
     when:
       branch: [develops]
   
-  another-stage:
-    image: omerxx/drone-secret-deployer:test
-    commands:
-      - echo HI
-    when:
-      branch: [develop]
 
   docker-publish:
     image: plugins/docker
