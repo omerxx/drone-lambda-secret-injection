@@ -1,6 +1,6 @@
 pipeline:  
   add-repo:
-    image: omerxx/drone-secret-deployer:test
+    image: omerxx/drone-secret-deployer:test1
     when:
       branch: develop
 
