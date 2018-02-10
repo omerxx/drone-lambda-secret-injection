@@ -1,7 +1,6 @@
 pipeline:  
   add-repo:
     image: omerxx/drone-secret-deployer
-    pull: true
     drone_server: https://droneio.spot.im
     action: add
     secrets: 
