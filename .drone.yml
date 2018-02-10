@@ -2,6 +2,13 @@ pipeline:
   add-repo:
     image: omerxx/drone-secret-deployer:test
     when:
+      branch: [develops]
+  
+  another-stage:
+    image: alpine
+    commands:
+      - echo HI
+    when:
       branch: [develop]
 
   docker-publish:
