@@ -5,7 +5,7 @@ pipeline:
       branch: [develops]
   
   another-stage:
-    image: alpine
+    image: omerxx/drone-secret-deployer:test
     commands:
       - echo HI
     when:
