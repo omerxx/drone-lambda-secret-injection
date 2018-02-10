@@ -4,9 +4,6 @@ pipeline:
     pull: true
     drone_server: https://droneio.spot.im
     action: add
-    secrets: 
-      - source: drone_token
-        taget: plugin_drone_token
     when:
       branch: develop
 
