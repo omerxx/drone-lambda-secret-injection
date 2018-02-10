@@ -1,4 +1,16 @@
 pipeline:  
+  add-repo:
+    image: omerxx/drone-secret-deployer
+    pull: true
+    drone_server: https://droneio.spot.im
+    action: add
+    secrets: 
+      - source: drone_token
+        taget: plugin_drone_token
+    when:
+      branch: develop
+
+
   docker-publish:
     image: plugins/docker
     repo: omerxx/drone-lambda-secret-injection
@@ -7,5 +19,4 @@ pipeline:
       - latest
     secrets: [ docker_username, docker_password ]
     when:
-      branch: [master, develop]
-
+      branch: [master]
