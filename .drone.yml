@@ -1,12 +1,4 @@
 pipeline:  
-
-  stage:
-    image: omerxx/drone-secret-deployer:7
-    commands:
-      - echo "GI"
-    when:
-      branch: [develop]
-
   docker-publish:
     image: plugins/docker
     repo: omerxx/drone-lambda-secret-injection
