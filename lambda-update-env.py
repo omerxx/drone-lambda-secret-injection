@@ -28,7 +28,8 @@ def update_function_configuration():
         FunctionName = pp('functionname'),
         Environment={
             'Variables': env_handler(pp('environment_variables'))
-        }
+        },
+        Timeout = pp('timeout')
     )
 
     print response

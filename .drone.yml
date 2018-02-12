@@ -7,5 +7,4 @@ pipeline:
       - latest
     secrets: [ docker_username, docker_password ]
     when:
-      branch: [master, develop]
-
+      branch: [master]
