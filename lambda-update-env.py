@@ -29,7 +29,7 @@ def update_function_configuration():
         Environment={
             'Variables': env_handler(pp('environment_variables'))
         },
-        Timeout = pp('timeout')
+        Timeout = int(pp('timeout'))
     )
 
     print response
